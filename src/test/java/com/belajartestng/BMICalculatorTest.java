@@ -39,4 +39,14 @@ public class BMICalculatorTest {
 
         Assert.assertEquals(actualBMI, expectedBMI, 0.01);
     }
+
+    @Test
+    public void testBMICategory_Overweight() {
+        double bmi = 29.39;
+        String expectedCategory = "Kelebihan berat badan (Overweight)";
+        String actualCategory = bmiCalculator.categoryBMI(bmi);
+
+        Assert.assertEquals(actualCategory, expectedCategory);
+    }
+
 }
